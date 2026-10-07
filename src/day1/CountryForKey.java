@@ -1,15 +1,15 @@
 package day1;
 
-class LookupTable {
+class CountryForKey {
     String[] data = new String[256];
 
-    LookupTable() {
+    CountryForKey() {
         for (int i = 0; i < 256; i++) {
-            data[i] = "Value_" + i;
+            data[i] = "Country_" + i;
         }
     }
 
     String lookup(byte key) {
-        return data[key];
+        return data[Byte.toUnsignedInt(key)];
     }
 }

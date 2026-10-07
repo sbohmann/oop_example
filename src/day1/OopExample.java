@@ -14,7 +14,7 @@ import static java.lang.IO.println;
 
 class OopExample {
     void main() {
-        var lookupTable = new LookupTable();
+        var countryForKey = new CountryForKey();
 
         try (ServerSocketChannel serverChannel = ServerSocketChannel.open();
              Selector selector = Selector.open()) {
@@ -60,7 +60,7 @@ class OopExample {
                             readBuffer.flip();
                             while (readBuffer.hasRemaining()) {
                                 byte b = readBuffer.get();
-                                String mappedString = lookupTable.lookup(b);
+                                String mappedString = countryForKey.lookup(b);
                                 ByteBuffer writeBuffer = ByteBuffer.wrap(mappedString.getBytes(StandardCharsets.UTF_8));
                                 while (writeBuffer.hasRemaining()) {
                                     client.write(writeBuffer);
