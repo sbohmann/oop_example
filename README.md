@@ -19,4 +19,5 @@ This is a big one, now the server is its own thing, and the main method looks mu
 ## Day 3
 
 The server no longer knows about countries.
+
 Client handling is now delegated to a dedicated handler that takes the lookup as a dependency.
