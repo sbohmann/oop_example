@@ -16,7 +16,7 @@ class OopExample {
     void main() {
         String[] lookupTable = new String[256];
         for (int i = 0; i < 256; i++) {
-            lookupTable[i] = "Value_" + i;
+            lookupTable[i] = "Country_" + i;
         }
 
         try (ServerSocketChannel serverChannel = ServerSocketChannel.open();
